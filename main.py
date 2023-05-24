@@ -47,6 +47,13 @@ class MyTCPHandler(socketserver.StreamRequestHandler):
             http_request('''
                 <h1>Not found</h1>
                 ''')
+        
+        print(
+                f'Method: {request.method}\n'
+                f'URI: {request.uri}\n'
+                f'Protocol: {request.protocol}\n'
+            )
+        
         response.send()
 
 
